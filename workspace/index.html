@@ -1,0 +1,94 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <script type="text/javascript" src="js/jquery-3.1.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/tether.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/Winwheel.js"></script>
+    <script type="text/javascript" src="js/TweenMax.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+</head>
+
+<body class="text-amadita">
+
+    <div class="container-fluid h-100">
+        <div class="d-flex flex-column justify-content-center h-100">
+            <div class="p-3 d-flex justify-content-between">
+                <div class="w-25 amadita-logo">&nbsp;</div>
+                <div class="d-flex flex-row-reverse align-items-center">
+                    <a data-toggle="modal" data-target="#configAwardsModal">
+                        <i class="icon-cog-1 x4 text-amadita-inverse"></i>
+                    </a>
+                    <a data-toggle="modal" data-target="#seeAwardsModal">
+                        <i class="icon-list x4 text-amadita-inverse"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex align-self-stretch flex-column justify-content-center align-items-center h-100 pr">
+                <div class="canvas-wrapper d-flex flex-column justify-content-center align-items-center h-100 pr">
+                    <div class="non-semantic-protector hidden">
+                        <h1 class="ribbon">
+                            <strong class="ribbon-content w-100 text-center text-amadita" id="message">&nbsp;</strong>
+                        </h1>
+                    </div>
+                    <canvas id="canvas" class="canvas"></canvas>
+                    <button id="btnSpin" class="btn btn-outline-primary btn-lg" onclick="startSpin()">
+                    <i class="icon-cw x4"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- configAwardsModal -->
+        <div class="modal fade" id="configAwardsModal" tabindex="-1" role="dialog" aria-labelledby="configAwardsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="configAwardsModalLabel">
+                            Configurar Premios
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <table id="configAwardsTable" class="table table-striped table-sm text-center"></table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning" id="restart">Reiniciar Ruleta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- seeAwardsModal -->
+        <div class="modal fade" id="seeAwardsModal" tabindex="-1" role="dialog" aria-labelledby="seeAwardsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <table id="awardsTable" class="table table-striped table-sm text-center"></table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+                        <button id="btnSpin" class="btn btn-primary" onclick="startSpin()">
+                            <i class="icon-cw"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
