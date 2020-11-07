@@ -65,11 +65,15 @@ span.pin {
 }
 
 .amadita-logo {
+	background: url(amadita-logo.png) no-repeat center;
+	background-size: 70%;
+	padding: 70px;
+}
+.amadita-app {
 	background: url(amadita-app.png) no-repeat center;
 	background-size: 70%;
 	padding: 70px;
 }
-
 @media (max-width: 980px) {
 	.amadita-logo {
 		width: 65% !important;
@@ -166,7 +170,7 @@ span.pin {
 }
 
 
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. 
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it.
 Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 
 
@@ -271,21 +275,21 @@ Note, that will break hinting! In other OS-es font will be not as sharp as it co
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .fade-in {
-  opacity: 0; 
-  animation: fadeIn ease-in 1; 
-  animation-fill-mode: forwards; 
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
   animation-duration: 0.3s;
-  animation-delay: 0.3s; 
+  animation-delay: 0.3s;
 }
 
 @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
 
 .fade-out {
-  opacity: 1; 
-  animation: fadeOut ease-in 1; 
-  animation-fill-mode: forwards; 
+  opacity: 1;
+  animation: fadeOut ease-in 1;
+  animation-fill-mode: forwards;
   animation-duration: 0.3s;
-  animation-delay: 0.3s; 
+  animation-delay: 0.3s;
 }
 
 .hidden{

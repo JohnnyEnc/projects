@@ -46,6 +46,7 @@ $(document).ready(function () {
         'textAlignment': 'center',
         'lineWidth': 4,
         'segments': getRemainingAwards(),
+        'textFontSize' : 35,
         'animation': {
             'type': 'spinToStop',
             'duration': 5,
@@ -80,80 +81,73 @@ $(document).ready(function () {
 function setLocalStorage() {
     var defaultQuantity = 50;
     var defaultJSON = [{
-        "Awards": [{
+        "Awards": [
+            {
             "id": 0,
             "cantidad": '!',
             "restantes": '!',
             "fillStyle": '#7C878E',
-            'text': 'Gracias por participar',
+            'text': '',
             'textFillStyle': 'white',
-            'strokeStyle': 'white'
-        }, {
-            "id": 1,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
-            "fillStyle": 'white',
-            'text': 'Mochila',
-            'textFillStyle': '#E31C79',
-            'strokeStyle': 'white'
-        }, {
-            "id": 2,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
-            "fillStyle": '#E31C79',
-            'text': 'Lapicero',
-            'textFillStyle': 'white',
-            'strokeStyle': 'white'
-        }, {
-            "id": 3,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
-            "fillStyle": '#7C878E',
-            'text': 'Bulto',
-            'textFillStyle': 'white',
-            'strokeStyle': 'white'
-        }, {
-            "id": 4,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
-            "fillStyle": 'white',
-            'text': 'Chupi',
-            'textFillStyle': '#E31C79',
-            'strokeStyle': 'white'
-        }, {
-            "id": 5,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
-            "fillStyle": '#E31C79',
-            'text': 'PopSockets',
-            'textFillStyle': 'white',
-            'strokeStyle': 'white'
-        },{
-            "id": 6,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
-            "fillStyle": 'white',
-            'text': 'Memorias USB',
-            'textFillStyle': '#E31C79',
-            'strokeStyle': 'white'
-        }, {
-            "id": 7,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
-            "fillStyle": '#E31C79',
-            'text': 'Plumas Fuente',
-            'textFillStyle': 'white',
-            'strokeStyle': 'white'
+            'strokeStyle': 'white',
+            'textFontWeight' : 'bold',
+
         },
         {
-            "id": 8,
-            "cantidad": defaultQuantity,
-            "restantes": defaultQuantity,
+            "id": 1,
+            "cantidad": '!',
+            "restantes": '!',
             "fillStyle": 'white',
-            'text': 'Porta Tarjeta',
+            'text': 'Premio',
             'textFillStyle': '#E31C79',
-            'strokeStyle': 'white'
-        }]
+            'strokeStyle': 'white',
+            'textFontWeight' : 'bold',
+
+        },
+        {
+            "id": 2,
+            "cantidad": '!',
+            "restantes": '!',
+            "fillStyle": '#7C878E',
+            'text': '',
+            'textFillStyle': 'white',
+            'strokeStyle': 'white',
+            'textFontWeight' : 'bold',
+        },
+        {
+            "id": 3,
+            "cantidad": '!',
+            "restantes": '!',
+            "fillStyle": 'white',
+            'text': 'Premio',
+            'textFillStyle': '#E31C79',
+            'strokeStyle': 'white',
+            'textFontWeight' : 'bold',
+
+        },
+        {
+            "id": 4,
+            "cantidad": '!',
+            "restantes": '!',
+            "fillStyle": '#7C878E',
+            'text': '',
+            'textFillStyle': 'white',
+            'strokeStyle': 'white',
+            'textFontWeight' : 'bold',
+
+        },
+        {
+            "id": 5,
+            "cantidad": '!',
+            "restantes": '!',
+            "fillStyle": 'white',
+            'text': 'Premio',
+            'textFillStyle': '#E31C79',
+            'strokeStyle': 'white',
+            'textFontWeight' : 'bold',
+
+        },
+      ]
     }];
 
     if (localStorage.getItem('defaultJSON') === null) {
